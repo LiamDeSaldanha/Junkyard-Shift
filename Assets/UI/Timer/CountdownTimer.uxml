@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Timer/timer.uss?fileID=7433441132597879392&amp;guid=ed9542d7481e3de429f3559ef9fc5e07&amp;type=3#timer"/>
+    <ui:VisualElement name="Container" style="flex-grow: 1;">
+        <ui:Image source="project://database/Assets/UI/Timer/Hourglass.png?fileID=2800000&amp;guid=94cae52a68b82db42823c9c2d87f8836&amp;type=3#Hourglass" name="Hourglass" style="width: 0%; height: 0%; min-width: 10%; min-height: 10%; max-width: 0%; max-height: 0%; margin-top: 114px;">
+            <ui:Label text="10:00" name="Timer" style="margin-top: 106px; width: 0%; height: 0%; min-width: 50%; min-height: 50%; max-width: 0%; max-height: 0%; font-size: 48px; align-self: center; -unity-text-outline-color: rgb(255, 255, 255); -unity-text-outline-width: 0; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=46a5e77e519b9e340bd392a756580ba6&amp;type=3#NotInter-Regular&quot;); color: rgb(255, 243, 0);"/>
+        </ui:Image>
+    </ui:VisualElement>
+</ui:UXML>

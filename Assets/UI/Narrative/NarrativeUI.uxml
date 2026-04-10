@@ -1,0 +1,51 @@
+<ui:UXML 
+xmlns:uie="UnityEditor.UIElements" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:ui="UnityEngine.UIElements" 
+xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd">
+    <Style src="NarrativeUI.uss" />
+
+    <!--
+        Root container — fills the entire screen.
+        All children are absolutely positioned on top of each other.
+    -->
+    <ui:VisualElement name="Root" class="root">
+
+        <!-- Full-screen background image. Swapped at runtime via NarrativeController. -->
+        <ui:VisualElement name="Background" class="background" />
+
+        <!-- 
+            Semi-transparent dark overlay that sits over the background.
+            Softens the image so text is more readable without fully obscuring the art.
+        -->
+        <ui:VisualElement name="DimOverlay" class="dim-overlay" />
+
+        <!-- 
+            SKIP button — top-right corner, intentionally faded.
+            Wired up in NarrativeController.cs via name="SkipButton".
+        -->
+        <ui:Button name="SkipButton" text="SKIP  ▶▶" class="skip-button" />
+
+        <!-- 
+            Dialogue box — bottom-left, spans ~82% of screen width, ~20% height.
+            Contains the scrollable caption label.
+        -->
+        <ui:VisualElement name="DialogueBox" class="dialogue-box">
+
+            <!-- Decorative top accent bar (pure CSS, no code needed) -->
+            <ui:VisualElement name="AccentBar" class="accent-bar" />
+
+            <!-- Speaker / caption text. Set at runtime via NarrativeController. -->
+            <ui:Label name="CaptionText" class="caption-text" text="" />
+
+        </ui:VisualElement>
+
+        <!-- 
+            CONTINUE / START TUTORIAL button — bottom-right corner.
+            Text is swapped at runtime by NarrativeController.cs.
+            Named "ContinueButton" to match the existing controller query.
+        -->
+        <ui:Button name="ContinueButton" text="Continue  ›" class="continue-button" />
+
+    </ui:VisualElement>
+</ui:UXML>

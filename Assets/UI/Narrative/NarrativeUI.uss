@@ -1,0 +1,197 @@
+﻿/* ============================================================
+   NarrativeUI.uss  —  Sci-fi cinematic narration stylesheet
+   Unity UI Toolkit  |  Tested with Unity 2022 LTS+
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   ROOT  —  Full-screen container
+   ---------------------------------------------------------- */
+.root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ----------------------------------------------------------
+   BACKGROUND  —  Full-screen image, replaced per slide
+   ---------------------------------------------------------- */
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: stretch-to-fill;
+    /* Slight desaturation hint via a very subtle overlay handled by DimOverlay */
+    transition: background-image 0.4s ease;
+}
+
+/* ----------------------------------------------------------
+   DIM OVERLAY  —  Thin dark vignette to improve text contrast
+   ---------------------------------------------------------- */
+.dim-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient-style darkening toward the bottom where the dialogue box sits */
+    background-color: rgba(0, 0, 0, 0.28);
+}
+
+/* ----------------------------------------------------------
+   SKIP BUTTON  —  Top-right, intentionally ghosted / faded
+   ---------------------------------------------------------- */
+.skip-button {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+
+    /* Ghost style: near-transparent background, muted text */
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(200, 210, 230, 0.45);
+    border-color: rgba(180, 200, 255, 0.18);
+    border-width: 1px;
+    border-radius: 3px;
+
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: 0.55;
+
+    /* Subtle hover transition */
+    transition: opacity 0.25s ease, background-color 0.25s ease;
+    cursor: link;
+}
+
+.skip-button:hover {
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: rgba(220, 230, 255, 0.85);
+    border-color: rgba(120, 160, 255, 0.45);
+}
+
+.skip-button:active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ----------------------------------------------------------
+   DIALOGUE BOX  —  Bottom-left, ~82% wide, ~20% tall
+   ---------------------------------------------------------- */
+.dialogue-box {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+
+    /* 82% leaves comfortable room for the Continue button on the right */
+    width: 82%;
+
+    /* Min-height ~20% of a 1080p screen ≈ 216px; clamp generously */
+    min-height: 18%;
+    max-height: 24%;
+
+    /* Frosted-glass dark panel */
+    background-color: rgba(4, 10, 22, 0.88);
+    border-color: rgba(80, 160, 255, 0.30);
+    border-width: 1px;
+    border-radius: 6px;
+
+    padding-top: 0;         /* accent bar handles top spacing */
+    padding-bottom: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    overflow: hidden;
+    
+    /* Slide-in from the bottom when scene loads (driven by adding .visible class in code) */
+    transition: opacity 0.35s ease;
+}
+
+/* ----------------------------------------------------------
+   DIALOGUE BOX — Top accent bar (decorative teal line)
+   ---------------------------------------------------------- */
+.accent-bar {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 14px;
+    background-color: rgba(60, 160, 255, 0.70);
+    border-radius: 3px;
+}
+
+/* ----------------------------------------------------------
+   CAPTION TEXT  —  Wrapping narrative text inside the box
+   ---------------------------------------------------------- */
+.caption-text {
+    color: rgb(220, 232, 255);
+    font-size: 26px;
+
+    /* Essential for text wrapping in Unity UI Toolkit */
+    white-space: normal;
+
+    -unity-text-align: upper-left;
+    -unity-font-style: normal;
+
+    /* Comfortable line spacing */
+    /* Note: Unity USS does not support line-height directly;
+       use a custom FontAsset with adjusted metrics if needed */
+    margin: 0;
+    padding: 0;
+
+    /* Smooth text swap */
+    transition: opacity 0.2s ease;
+}
+
+/* ----------------------------------------------------------
+   CONTINUE BUTTON  —  Bottom-right, primary CTA
+   ---------------------------------------------------------- */
+.continue-button {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+
+    /* Align height roughly with the dialogue box by matching bottom offset */
+    min-width: 140px;
+
+    /* Glowing sci-fi blue */
+    background-color: rgba(30, 90, 200, 0.88);
+    color: rgb(230, 240, 255);
+    border-color: rgba(100, 170, 255, 0.55);
+    border-width: 1px;
+    border-radius: 5px;
+
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+    -unity-font-style: bold;
+
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    cursor: link;
+}
+
+.continue-button:hover {
+    background-color: rgba(50, 120, 240, 0.96);
+    border-color: rgba(140, 200, 255, 0.85);
+}
+
+.continue-button:active {
+    background-color: rgba(20, 60, 160, 1.0);
+}

@@ -1,0 +1,79 @@
+{
+  "slides": [
+    {
+      "id": 0,
+      "imagePath": "Introduction/IntroImages/approaching_planet",
+      "buttonText": "Continue",
+      "lines": [
+        {
+          "audioPath": "Introduction/IntroAudio/approaching_planet",
+          "caption": "In the arms of the Milky Way, close to the edge of the galaxy, you make your way to a remote, barren planet. The human race is at its pinnacle, having expanded across the galaxy. However to you, it's just another day on the job."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "imagePath": "Introduction/IntroImages/inside_spacecraft",
+      "buttonText": "Continue",
+      "lines": [
+        {
+          "audioPath": "Introduction/IntroAudio/inside_spacecraft.mp3",
+          "caption": "\"S1 Marina, this is Jack from the Odyssey crew. I am about to touch down on Junk planet, designated B-2-1-9. As usual, the scans don't indicate anything abnormal on, or around, the planet. I'll be touching down for my last shift of the week. Over.\""
+        }
+      ]
+    },
+        {
+      "id": 2,
+      "imagePath": "Introduction/IntroImages/as_approach_ground",
+      "buttonText": "Continue",
+      "lines": [
+        {
+          "audioPath": "Introduction/IntroAudio/as_approach_ground.mp3",
+          "caption": "As the interplanetary junkyard manager, you clock in for your final shift. Long ago, a big war broke out between the human race and the aliens. The aftermath was a planet devoid of life, designated as the interplanetary 'junkyard.' "
+
+        }
+      ]
+    },
+        {
+      "id": 3,
+      "imagePath": "Introduction/IntroImages/energy_core",
+      "buttonText": "Continue",
+      "lines": [
+        {
+          "audioPath": "Introduction/IntroAudio/energy_core.mp3",
+          "caption": "However, something on the ground heard you, and woke up. The energies radiating from your spaceship woke up an old alien energy core, long forgotten from the old war. As you fly over, the energies from the core fire into life, causing sparks and smoke. It is aware, and it detects, your presence."
+        }
+      ]
+    },
+        {
+      "id": 4,
+      "imagePath": "Introduction/IntroImages/junk_monsters",
+      "buttonText": "Continue",
+      "lines": [
+        {
+          "audioPath": "Introduction/IntroAudio/junk_monsters.mp3",
+          "caption": "In order to protect itself, the energy core begins to animate forms from the junk. The pieces combine, forming one junk monster after the other. What was once thought to be long-forgotten trash, has now become a formidable protection from threats. "
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "imagePath": "Introduction/IntroImages/player_landed",
+      "buttonText": "Start Tutorial",
+      "lines": [
+        {
+          "audioPath": "Introduction/IntroAudio/s1_marina",
+          "caption": "\"Jack from the Odyssey, this is S1 Marina. We are picking up strange energy signals a short position from your location. Please investigate.\""
+        },
+        {
+          "audioPath": "Introduction/IntroAudio/last_narrative",
+          "caption": "You step out of your spaceship and surveil the area."
+        },
+        {
+          "audioPath": "Introduction/IntroAudio/last_jack",
+          "caption": "\"Roger that S1 Marina. I will investigate and report. Over. I wonder what I will find... \""
+        }
+      ]
+    }
+  ]
+}

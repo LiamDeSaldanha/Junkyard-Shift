@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &332144493663766402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3993346854152739534}
+  - component: {fileID: 492955540512162172}
+  - component: {fileID: 2662272502425767942}
+  m_Layer: 5
+  m_Name: CraftingUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3993346854152739534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332144493663766402}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492955540512162172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332144493663766402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 4dfb3c29cd45f63429f374bff9432344, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 5a2d42623725db846910eab0717fb5f3, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &2662272502425767942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332144493663766402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9347f61132e028c4fa211d6d41b82220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  uiCrafting: {fileID: 492955540512162172}
+  KnifeImage: {fileID: 2800000, guid: cf1555d5248265f4b801f3be6fb060b1, type: 3}
+  PistolImage: {fileID: 2800000, guid: 3e1a6054c8043574fbadd423968d4d6b, type: 3}
+  MacheteImage: {fileID: 2800000, guid: 172daa9ec80b92e40b1d94ed04f6a5e2, type: 3}
+  Ak47Image: {fileID: 2800000, guid: 04749c29398e6d34a9db23963dc67aff, type: 3}
+  PlasmaBladeImage: {fileID: 2800000, guid: d28d8cf5e70bf1b41977517a991fbd36, type: 3}
+  PlasmaRifleImage: {fileID: 2800000, guid: 91dffce405c671e4bb3bd43d38c8a80a, type: 3}
+  SpearImage: {fileID: 2800000, guid: 1599aeb1997ce1541a811d8653a1cd5f, type: 3}
+  BazookaImage: {fileID: 2800000, guid: 206f0fa39ec7efb45845c68f18c68193, type: 3}
+  resourceManager: {fileID: 0}

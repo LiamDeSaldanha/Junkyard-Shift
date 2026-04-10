@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=10e1120037aa3de4c8d428a6f9c0035e&amp;type=3#MainMenu"/>
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/MainMenu/Background.png?fileID=2800000&amp;guid=7b09085dafad70d43856436eeba3aec4&amp;type=3#Background&quot;);">
+        <ui:Label text="Junkyard Shift" name="MainTitle" class="MainTitle main-title" style="margin-top: 0%;"/>
+        <ui:Button text="Start" focusable="true" name="StartGame" class="button" style="align-self: center; color: rgb(0, 255, 52); -unity-text-outline-color: rgb(0, 0, 0); margin-top: 15px; margin-left: 15px; margin-bottom: 15px; margin-right: 15px;"/>
+        <ui:Button text="E X I T" focusable="true" name="ExitGame" emoji-fallback-support="true" class="button" style="align-self: center; align-items: auto; color: rgb(255, 0, 0); -unity-text-outline-color: rgb(0, 0, 0); margin-top: 10%; -unity-text-outline-width: 3px; margin-left: 15px; margin-bottom: 15px; margin-right: 15px;"/>
+    </ui:VisualElement>
+</ui:UXML>

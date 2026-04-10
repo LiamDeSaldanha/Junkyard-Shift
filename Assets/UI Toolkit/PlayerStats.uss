@@ -1,0 +1,153 @@
+/* ════════════════════════════════════════════════════════════
+   PlayerStats.uss  —  Top-left HUD bars
+   ════════════════════════════════════════════════════════════ */
+
+
+/* ── Outer container ──────────────────────────────────────── */
+
+.player-stats {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    flex-direction: column;
+    padding: 10px 14px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+}
+
+
+/* ── Row shared by both bars ──────────────────────────────── */
+
+.bar-row {
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+    margin-bottom: 8px;  /* spacing between the two rows */
+}
+
+.bar-row:last-child {
+    margin-bottom: 0px;
+}
+
+
+/* ── Icon wrapper (22 × 22 px, left of each bar) ─────────── */
+
+.bar-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Health "+" — bold red Label */
+.icon-health {
+    color: rgb(210, 40, 40);
+    font-size: 22px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    /*
+       To use a sprite instead:
+         background-image: url('Sprites/icon_health.png');
+         -unity-background-image-tint-color: rgb(210, 40, 40);
+       Then remove the <ui:Label> child in UXML.
+    */
+}
+
+/* Fuel gas icon — sprite path; the nested Label acts as fallback */
+.icon-fuel {
+    /*
+       Swap the url() for your actual sprite asset path, e.g.:
+         background-image: url('project://database/Assets/UI/Sprites/icon_fuel.png');
+       Unity resolves project:// paths from the Assets folder root.
+    */
+    background-image: none;
+    -unity-background-image-tint-color: rgb(0, 195, 175);
+}
+
+.icon-fuel-label {
+    font-size: 14px;
+    -unity-text-align: middle-center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ── Bar track (sunken background behind the fill) ─────────── */
+
+.bar-track {
+    flex-grow: 1;
+    height: 16px;
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* Fuel track ends 22 px earlier → visually shorter than health bar */
+.bar-track--fuel {
+    margin-right: 22px;
+}
+
+
+/* ── Bar fill (driven by C# width changes) ──────────────────── */
+
+.bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    /* Width is set at runtime:
+         root.Q<VisualElement>("health-fill").style.width =
+             Length.Percent(hp / maxHp * 100f);
+    */
+    width: 100%;
+}
+
+.fill-health {
+    background-color: rgb(200, 38, 38);
+}
+
+.fill-fuel {
+    background-color: rgb(0, 185, 165);
+}
+
+
+/* ── Segment dividers (at 33 % and 67 %) ────────────────────── */
+/*
+   Unity USS does not support border-style: dashed or dotted.
+
+   We simulate 3 short dashes by encoding hard-stop colour bands
+   into a linear-gradient on a 2 px wide element.
+
+   The stop percentages are calibrated for the 16 px track height:
+     each dash = ~3 px tall, each gap = ~2.5 px.
+
+   If you later change .bar-track { height }, re-tune the
+   percentages so they still read as 3 balanced dashes.
+*/
+.seg-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.00)  0%,
+        rgba(0, 0, 0, 0.00) 12%,
+        rgba(0, 0, 0, 0.65) 12%,
+        rgba(0, 0, 0, 0.65) 30%,
+        rgba(0, 0, 0, 0.00) 30%,
+        rgba(0, 0, 0, 0.00) 44%,
+        rgba(0, 0, 0, 0.65) 44%,
+        rgba(0, 0, 0, 0.65) 62%,
+        rgba(0, 0, 0, 0.00) 62%,
+        rgba(0, 0, 0, 0.00) 76%,
+        rgba(0, 0, 0, 0.65) 76%,
+        rgba(0, 0, 0, 0.65) 94%,
+        rgba(0, 0, 0, 0.00) 94%,
+        rgba(0, 0, 0, 0.00) 100%
+    );
+}

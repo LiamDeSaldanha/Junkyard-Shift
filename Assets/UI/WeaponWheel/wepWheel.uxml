@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-authoring="False">
+    <Style src="wepWheel.uss" />
+    
+    <!-- The main container covers the whole screen -->
+    
+  
+        <ui:VisualElement name="screen-container" class="full-screen">
+        <!-- The menu container is centered on the left half -->
+            <ui:VisualElement name="radial-menu" class="menu-wheel">
+                <!-- 8 Slices -->
+            <ui:VisualElement name="slice-Knife" class="slice normal">
+                <ui:Image name="icon" class="weapon-icon" style="background-image: url('project:/Assets/UI/WeaponWheel/Knife.png');"  />
+            </ui:VisualElement>z
+            <ui:VisualElement name="slice-Pistol" class="slice normal">
+                <ui:Image name="icon" class="weapon-icon" style="background-image: url('project:/Assets/UI/WeaponWheel/Pistol.png');" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slice-Ak47" class="slice normal">
+                <ui:Image name="icon" class="weapon-icon" style="background-image: url('project:/Assets/UI/WeaponWheel/Ak47.png');" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slice-PlasmaRifle" class="slice normal">
+                <ui:Image name="icon" class="weapon-icon" style="background-image: url('project:/Assets/UI/WeaponWheel/PlasmaRifle.png');" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slice-Bazooka" class="slice normal">
+                <ui:Image name="icon" class="weapon-icon" style="background-image: url('project:/Assets/UI/WeaponWheel/Bazooka.png');" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slice-Spear" class="slice normal">
+                <ui:Image name="icon" class="weapon-icon" style="background-image: url('project:/Assets/UI/WeaponWheel/Spear.png');" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slice-PlasmaBlade" class="slice normal">
+                <ui:Image name="icon" class="weapon-icon" style="background-image: url('project:/Assets/UI/WeaponWheel/PlasmaBladev2.png');" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slice-Machete" class="slice normal">
+                <ui:Image name="icon" class="weapon-icon" style="background-image: url('project:/Assets/UI/WeaponWheel/Machete.png');" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

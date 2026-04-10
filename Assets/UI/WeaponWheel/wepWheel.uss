@@ -1,0 +1,74 @@
+/* Layout the main screen */
+.full-screen {
+    flex-grow: 1;
+    justify-content: center; /* Vertically centers the menu */
+    align-items: center; /* Horizontally aligns to the left */
+    width: 100%;             /* Ensure parent fills the screen */
+    height: 100%;
+}
+
+/* Your menu wheel remains clean */
+.menu-wheel {
+    width: 50%;
+    height: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.slice {
+    position: absolute;
+    width: 160px;         /* Reduced from 120px */
+    height: 160px;        /* Reduced from 120px */
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;   /* Must be half of height to stay centered */
+    margin-left: -80px;  /* Must be half of width to stay centered */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual Slice Positions (45-degree increments) */
+/* Formula: left = 50% + cos(angle) * radius; top = 50% + sin(angle) * radius */
+#slice-Knife { translate: 0 -225%; }      /* Was -300% */
+#slice-Pistol { translate: 159% -159%; }   /* Was 212% */
+#slice-Ak47 { translate: 225% 0; }       /* Was 300% */
+#slice-PlasmaRifle { translate: 159% 159%; }    /* Was 212% */
+#slice-Bazooka { translate: 0 225%; }       /* Was 300% */
+#slice-Spear { translate: -159% 159%; }   /* Was 212% */
+#slice-PlasmaBlade { translate: -225% 0; }      /* Was 300% */
+#slice-Machete { translate: -159% -159%; }  /* Was 212% */
+/* Visual States */
+
+.normal {
+    opacity: 0.8;
+    background-color: rgba(255, 165, 0, 0.1);
+    border-color: black; /* Set outline color */
+    border-width: 2px; /* Set outline thickness */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.highlight {
+    opacity: 1;
+    scale: 1.2;
+    background-color: rgba(255, 200, 0, 0.4);
+    border-width: 2px;
+    border-color: orange;
+}
+
+.greyed-out {
+    opacity: 0.3;
+    -unity-background-image-tint-color: gray; /* Added the leading dash */
+}
+
+/* Add a specific state for when an item is unavailable */
+.greyed-out .weapon-icon {
+    -unity-background-image-tint-color: rgba(128, 128, 128, 0.5);
+    opacity: 0.4;
+}
+
+.weapon-icon {
+    width: 100%;
+    height: 100%;
+    /* This ensures the icon doesn't stretch */
+    -unity-background-scale-mode: scale-to-fit;
+}

@@ -1,0 +1,21 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/PlayerStats.uss?fileID=7433441132597879392&amp;guid=1b56a080f381d6e4fb6a70ac5cce9799&amp;type=3#PlayerStats"/>
+    <ui:VisualElement name="PlayerStats" class="player-stats" style="width: 200px;">
+        <ui:VisualElement class="bar-row">
+            <ui:Label text="+" class="bar-icon icon-health"/>
+            <ui:VisualElement class="bar-track">
+                <ui:VisualElement name="health-fill" class="bar-fill fill-health"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="bar-row">
+            <ui:VisualElement class="bar-icon icon-fuel">
+                <ui:Label text="O2&#10;" name="lblOxygenFilter" class="icon-fuel-label" style="color: rgb(102, 225, 255);"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="bar-track bar-track--fuel">
+                <ui:VisualElement name="fuel-fill" class="bar-fill fill-fuel"/>
+                <ui:VisualElement class="seg-divider" style="left: 33.33%;"/>
+                <ui:VisualElement class="seg-divider" style="left: 66.66%;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

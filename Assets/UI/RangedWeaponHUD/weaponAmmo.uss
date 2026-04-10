@@ -1,0 +1,11 @@
+:root {
+}
+
+.bottomAlignedText {
+    align-content: auto;
+    align-self: auto;
+    font-size: 48px;
+    -unity-text-outline-width: 1px;
+    -unity-text-outline-color: rgb(170, 170, 170);
+    -unity-font-style: bold;
+}

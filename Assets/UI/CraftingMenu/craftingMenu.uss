@@ -1,0 +1,27 @@
+:root {
+}
+
+.Text {
+}
+
+.catergoryButtons {
+    width: 90%;
+    height: 24%;
+    font-size: 48px;
+    -unity-font-style: bold;
+    background-image: url("project://database/Assets/External%20Assets/YughuesFreeFlooringMaterials/Textures/T_YFFlM_10_d.tga?fileID=2800000&guid=0755e47b9a5be6f46b045f19db991e42&type=3#T_YFFlM_10_d");
+    border-top-color: rgb(255, 255, 255);
+    border-top-width: 1px;
+    border-right-color: rgb(255, 255, 255);
+    border-right-width: 1px;
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: rgb(255, 255, 255);
+    color: rgb(254, 255, 227);
+    -unity-text-outline-width: 1px;
+    -unity-text-outline-color: rgb(255, 255, 255);
+}
+
+.WeaponStats {
+}

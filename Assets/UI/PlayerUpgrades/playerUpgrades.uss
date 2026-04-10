@@ -1,0 +1,7 @@
+:root {
+}
+
+.text {
+    font-size: 48px;
+    color: rgb(255, 225, 0);
+}
