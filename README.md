@@ -73,4 +73,4 @@ https://github.com/user-attachments/assets/3e61fd0d-8ad0-41ae-b14f-d62e7fa5c2d7
 
 ## 🔗 Play the Game
 - Extract the Final Build .zip
-- Run the JunkyardShift.exe (this must be done in the extracted folder, you cannot move the .exe out of folder)
+- Run the JunkyardShift.exe inside the FinalBuild fodler (this must be done in the extracted folder, you cannot move the .exe out of folder)
