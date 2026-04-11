@@ -40,7 +40,7 @@ dwarf planet. Upon your arrival, you trigger a hidden relic from a old ancient w
 -	Resource Management
 -	Tutorial
 
-## 🧠 What I Did
+## 🧠 What I Did + Videos of my work
 - Designed, animated and implemented all enemy types in Blender and Unity, including a dissolve effect using Unity’s particle system.
 - Implemented enemy AI logic and behaviour in Unity using NavMesh and C# scripting.
 - Contributed to core game systems including shared game managers.
